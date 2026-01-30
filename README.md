@@ -5,21 +5,6 @@
 **Android Triage Professional** is a high-performance, Go-based forensic acquisition tool designed for incident responders and penetration testers. It automates the collection of volatile and non-volatile data from Android devices via ADB (Android Debug Bridge), ensuring chain-of-custody integrity with automated hashing and reporting.
 
 The tool focuses on **smart acquisition**, prioritizing high-value user artifacts (communications, timeline, location) over redundant system noise, making it efficient for time-critical investigations.
-
-## Key Features
-
-*   **Optimized Performance:**
-    *   **Fast Device Profiling:** Uses batched ADB commands (`getprop`) to fetch device details in milliseconds.
-    *   **Concurrent Hashing:** Utilizes a worker pool to calculate SHA-256 hashes of acquired files in parallel, significantly reducing post-acquisition processing time.
-    *   **Smart Triage:** Prioritizes volatile data and user artifacts, skipping massive system dumps unless explicitly requested.
-*   **Forensic Integrity:**
-    *   Automated SHA-256 hashing of all acquired files.
-    *   JSON metadata generation for every acquisition step.
-    *   Chain of Custody preserved with detailed logging (Serial, IMEI, Time).
-*   **Comprehensive Reporting:**
-    *   Generates an interactive HTML report.
-    *   Produces machine-readable JSON summaries.
-
 ---
 
 ## Menu Options Explained
